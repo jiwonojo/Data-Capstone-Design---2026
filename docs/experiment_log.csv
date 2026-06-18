@@ -1,0 +1,8 @@
+ID,Experiment,Model/Method,Setting,Result,Conclusion
+EXP-01,Leakage 포함 초기 실험,XGBoost/LightGBM,Risk_Score 포함,AUC 약 0.99,Risk_Score 의존으로 가짜 성능 판단
+EXP-02,Baseline_no_leakage,XGB/LGBM/RF,"Risk_Score, Failed_Transaction_Count_7d 제거",ROC-AUC 약 0.50,누수 제거 후 기존 feature 구분력 부족
+EXP-03,FE_added_no_leakage,XGB/LGBM/RF,행동 기반 feature 9개 추가,"AUC 개선 없음, XGB F1 소폭 증가",feature signal은 제한적
+EXP-04,Threshold Tuning,XGB/LGBM/RF,threshold 0.10~0.90 조정,"Recall 상승, Precision 약 0.32",FP 과다로 실무 적용 한계
+EXP-05,Interpretability,Feature Importance/SHAP,모델 해석,신규 feature 일부 상위 등장,SHAP 방향성 약함
+EXP-06,Autoencoder,PyTorch Autoencoder,정상 거래만 학습,ROC-AUC 0.5066,비지도 score도 label 분리 못함
+EXP-07,Stacking,XGB+LGBM+RF+LR,OOF 기반 stacking,ROC-AUC 0.4986,모델 복잡도 증가로 해결 안 됨

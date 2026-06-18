@@ -1,0 +1,10 @@
+Feature,Definition,Purpose,Observed_Result
+Amount_vs_User_Avg,현재 거래금액 / 사용자 평균 거래금액,평소보다 큰 거래 탐지,Fraud/Normal 분포 겹침
+Distance_vs_User_Avg,현재 거래거리 / 사용자 평균 거래거리,평소보다 먼 위치 거래 탐지,Fraud/Normal 분포 겹침
+Transaction_Interval,이전 거래와의 시간 간격(분),짧은 간격 연속 거래 탐지,단독 구분력 약함
+Velocity,거래 거리 / 거래 간격,물리적으로 어려운 이동 패턴 탐지,일부 outlier 중심
+Weekend_Night,주말이면서 새벽 시간 거래 여부,시간 맥락 이상 탐지,영향 제한적
+Is_New_Device,사용자 주 기기와 다른 기기 여부,계정 탈취 가능성 탐지,단독 구분 어려움
+Is_New_Location,사용자 주 위치와 다른 위치 여부,위치 이상 탐지,단독 구분 어려움
+Balance_to_Amount,거래금액 / 계좌잔액,잔액 대비 큰 거래 탐지,분포 겹침
+High_Daily_Count,일일 거래 횟수 5회 이상 여부,반복 거래 탐지,영향 제한적

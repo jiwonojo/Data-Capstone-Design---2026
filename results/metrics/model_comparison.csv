@@ -1,0 +1,7 @@
+Dataset,Model,AUC-ROC,AUC-PR,Precision,Recall,F1
+Baseline_no_leakage,XGBoost,0.5068,0.329,0.3478,0.0626,0.106
+Baseline_no_leakage,LightGBM,0.5037,0.3279,0.4516,0.0044,0.0086
+Baseline_no_leakage,RandomForest,0.4983,0.3203,0.2727,0.0056,0.011
+FE_added_no_leakage,XGBoost,0.501,0.321,0.3004,0.0719,0.116
+FE_added_no_leakage,LightGBM,0.4994,0.3202,0.2703,0.0031,0.0062
+FE_added_no_leakage,RandomForest,0.4906,0.3176,0.3478,0.0124,0.024
